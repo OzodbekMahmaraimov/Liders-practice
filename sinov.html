@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #counter {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Number Counter</h1>
+    <div class="counter">0</div>
+    <div class="counter">0</div>
+    <div class="counter">0</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let counterElement = document.querySelectorAll('.counter');
+            let currentNumber = 0;
+
+            function updateCounter() {
+                counterElement.forEach((item) => {
+                    item.textContent = currentNumber;
+                })
+                currentNumber++;
+
+                if (currentNumber > 70) {
+                    clearInterval(intervalId);
+                }
+            }
+
+            let intervalId = setInterval(updateCounter,); // Adjust the interval as needed
+
+        });
+    </script>
+</body>
+
+</html>

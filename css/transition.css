@@ -1,0 +1,133 @@
+.team-img:hover .team-img img {
+  transform: scale(1.05);
+}
+
+.box-team img {
+  transition: all 0.3s ease;
+}
+.box-team .malumot-team {
+  background-position-x: 200%;
+  transition: all 0.3s ease;
+}
+.box-team:hover img {
+  transform: scale(1.1);
+}
+.box-team:hover .malumot-team {
+  background-image: linear-gradient(to right, #3264f5 0%, #7202bb 51%, #3264f5 100%);
+  background-size: 200% auto;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+}
+.box-team:hover .malumot-team,
+.box-team:hover h4,
+.box-team:hover span,
+.box-team:hover p,
+.box-team:hover i {
+  color: white !important;
+}
+
+.hover-effect {
+  transition: all 0.7s ease-in-out;
+  background-size: 200% auto;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.all-text a,
+.all-text h4,
+.all-text p {
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.portfolio-one:hover .hover-effect {
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  background-image: linear-gradient(to right, #3264f5 0%, #7202bb 51%, #3264f5 100%);
+  opacity: 0.7;
+}
+.portfolio-one:hover .all-text a,
+.portfolio-one:hover .all-text h4,
+.portfolio-one:hover .all-text p {
+  opacity: 1;
+}
+
+.heading-one {
+  transition: all 0.3s ease-in-out;
+}
+
+.heading-one p,
+.heading-one .currency,
+.heading-one .packages,
+.heading-one i {
+  transition: all 0.2s ease-in-out;
+}
+
+.heading-one:hover {
+  background-color: #00bcd4;
+  color: white;
+}
+.heading-one:hover p {
+  color: white;
+}
+.heading-one:hover .currency {
+  color: white;
+}
+.heading-one:hover .packages {
+  color: white;
+}
+.heading-one:hover i {
+  color: white;
+}
+.heading-one:hover button {
+  background-color: white;
+  color: #000000;
+}
+
+.heading-two {
+  transition: all 0.3s ease-in-out;
+}
+
+.heading-two p,
+.heading-two .currency,
+.heading-two .packages,
+.heading-two i {
+  transition: all 0.2s ease-in-out;
+}
+
+.heading-two:hover {
+  background: linear-gradient(to right, #3264f5 2%, #7202bb 82%);
+  color: white;
+}
+.heading-two:hover p {
+  color: white;
+}
+.heading-two:hover .currency {
+  color: white;
+}
+.heading-two:hover .packages {
+  color: white;
+}
+.heading-two:hover i {
+  color: white;
+}
+.heading-two:hover .btn {
+  background: transparent !important;
+}
+
+.app-feature {
+  transition: ease-in-out 0.2s;
+}
+
+.app-feature:hover i {
+  position: relative;
+  top: -0.5rem;
+}
+
+.adress-social a:hover .fa-facebook-f, .adress-social a:hover .fa-twitter, .adress-social a:hover .fa-linkedin-in, .side-footer a:hover .fa-facebook-f, .side-footer a:hover .fa-twitter, .side-footer a:hover .fa-linkedin-in {
+  color: #4267B2;
+}
+.adress-social a:hover .fa-google-plus-g, .adress-social a:hover .fa-instagram, .side-footer a:hover .fa-google-plus-g, .side-footer a:hover .fa-instagram {
+  color: #C32AA3;
+}/*# sourceMappingURL=transition.css.map */
