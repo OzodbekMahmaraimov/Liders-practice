@@ -37,3 +37,14 @@ const navAnimation = () => {
         item.style.cssText = 'animation: nav-animation 2s ease-in-out'
     })
 }
+
+let textElement = document.getElementById('changingText');
+let texts = ['Style', 'Method', 'Way'];
+let currentIndex = 0;
+
+function changeText() {
+    textElement.textContent = texts[currentIndex];
+    currentIndex = (currentIndex + 1) % texts.length;
+}
+
+setInterval(changeText, 2000); 
