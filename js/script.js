@@ -1,50 +1,55 @@
-let swiper = new Swiper(".mySwiper", {
+window.addEventListener("DOMContentLoaded", () => {
+  let swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     grabCursor: true,
     keyboard: {
-        enabled: true,
+      enabled: true,
     },
     pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      el: ".swiper-pagination",
+      clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-});
+  });
 
-document.addEventListener('DOMContentLoaded', function () {
-    let counterElement = document.getElementById('.count');
+  document.addEventListener("DOMContentLoaded", function () {
+    let counterElement = document.getElementById(".count");
     let currentNumber = 0;
 
     function updateCounter() {
-        counterElement.textContent = currentNumber;
-        currentNumber++;
+      counterElement.textContent = currentNumber;
+      currentNumber++;
 
-        if (currentNumber > 70) {
-            clearInterval(intervalId);
-        }
+      if (currentNumber > 70) {
+        clearInterval(intervalId);
+      }
     }
 
     let intervalId = setInterval(updateCounter, 100); // Adjust the interval as needed
+  });
 
-});
-
-let navItem = document.querySelectorAll('.nav-link');
-const navAnimation = () => {
+  let navItem = document.querySelectorAll(".nav-link");
+  const navAnimation = () => {
     navItem.forEach((item) => {
-        item.style.cssText = 'animation: nav-animation 2s ease-in-out'
-    })
-}
+      item.style.cssText = "animation: nav-animation 2s ease-in-out";
+    });
+  };
 
-let textElement = document.getElementById('changingText');
-let texts = ['Style', 'Method', 'Way'];
-let currentIndex = 0;
+  let textElement = document.getElementById("changingText");
+  let texts = ["Style", "Method", "Way"];
+  let currentIndex = 0;
 
-function changeText() {
+  function changeText() {
     textElement.textContent = texts[currentIndex];
     currentIndex = (currentIndex + 1) % texts.length;
-}
+  }
 
-setInterval(changeText, 2000); 
+  setInterval(changeText, 2000);
+
+  setTimeout(function () {
+    document.querySelector(".loading-sect").style.display = "none";
+  }, 2000);
+});
